@@ -13,6 +13,7 @@ db.one("SELECT $1 AS value", 123)
         console.log("ERROR:", error);
     });
 	
+module.exports = db;
 /*
 var mysql = require('mysql');
 

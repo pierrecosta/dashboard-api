@@ -8,12 +8,19 @@ var Task = function(task){
     this.created_at = new Date();
 };
 
-Task.getlistServer = function (dataJson, result){
+Task.getListServer = function (inputQuery, result){
 	console.log('res', 'Inside db !');
-	console.log(dataJson.name);
-	console.log(dataJson.desc);
+	console.log(inputQuery.name);
 
-	result(null, dataJson.name);
-});           
+	result(null, inputQuery.name);
+};           
 
-module.exports=Task;
+Task.getListJsonServer = function (inputBody, result){
+	console.log('res', 'Inside db !');
+	console.log(inputBody.name);
+
+	result(null, inputBody.name);
+};  
+
+
+module.exports = Task;
